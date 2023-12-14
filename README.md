@@ -1,2 +1,2 @@
 # irunazushan.github.io
-This is portfolio of Ilnaz Shan
+This is portfolio of Irunazu Shan
