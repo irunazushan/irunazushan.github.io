@@ -36,14 +36,14 @@ install: clean
 	cd frontend && qmake && make && make clean && rm Makefile && mkdir ../build && mv SmartCalc.app/$(UI_BIN) ../build/
 
 dvi:
-	open ./documentation.md
+	open ./README.md
 
 dist: install
 	mkdir -p dist
 	cp  -R ./build/SmartCalc.app ./dist/SmartCalc.app
-	cp ./documentation.md ./dist/documentation.md
+	cp ./README.md ./dist/README.md
 	cd ./dist && tar cvzf SmartCalc.tgz *
-	cd ./dist && rm -R SmartCalc.app documentation.md
+	cd ./dist && rm -R SmartCalc.app README.md
 	make clean
 
 uninstall:

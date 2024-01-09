@@ -11,7 +11,11 @@ To use this calculator, the user needs to install the following utilities:
 - `qmake`
 
 ## Development Details
-The calculator has been developed using the C/C++ programming language and the QT Creator version 6.2.
+- The calculator has been developed using the C/C++  programming language using gcc compiler and the QT Creator version 6.2.
+- The program is built with Makefile which contains standard set of targets for GNU-programs: all, install, uninstall, clean, dvi, dist, test, gcov_report.
+- The calculation is done after you complete entering the calculating expression and press the = symbol or press "Enter" putton.
+- Users are able to enter up to 255 characters
+
 
 ## Installation Command
 To install the calculator, please run the following command:
@@ -50,14 +54,14 @@ The calculator includes various mathematical functions, including:
 | Computes natural logarithm| ln(x)|
 | Computes common logarithm| log(x)|
 
-<img src="src/images/smartcalc.png" alt="SmartCalc" title="The interface of the SmartCalc" width="50%">
+<img src="./images/smartcalc.png" alt="SmartCalc" title="The interface of the SmartCalc" width="50%">
 
     The interface of the SmartCalc
 
 ## Function Plotting
 The calculator provides the ability to plot functions. You can visualize mathematical equations easily.
 
-<img src="src/images/smartcalcplot.png" alt="SmartCalcPlot" title="Cos(x) plotting" width="50%">
+<img src="./images/smartcalcplot.png" alt="SmartCalcPlot" title="Cos(x) plotting" width="50%">
 
     Cos(x) plotting
 
@@ -66,7 +70,7 @@ The calculator has two special modes of operation:
 ### Credit Calculator 
 Useful for calculating credit payments.
 
-<img src="src/images/creditcalc.png" alt="CreditCalc" title="The interface of the credit calculator" width="50%">
+<img src="./images/creditcalc.png" alt="CreditCalc" title="The interface of the credit calculator" width="50%">
 
     The interface of the credit calculator
 
@@ -76,7 +80,7 @@ Useful for calculating credit payments.
 ### Deposit Calculator 
 Handy for calculating deposit interests.
 
-<img src="src/images/depositcalc.png" alt="DepositCalc" title="The interface of the deposit calculator" width="50%">
+<img src="./images/depositcalc.png" alt="DepositCalc" title="The interface of the deposit calculator" width="50%">
 
     The interface of the deposit calculator
 
