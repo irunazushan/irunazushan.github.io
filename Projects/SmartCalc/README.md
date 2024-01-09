@@ -1,9 +1,5 @@
 # SmartCalc Documentation
 
-## Copyright Information
-This calculator is protected by copyright. All rights reserved.
-© 2023 by convictw.
-
 ## Installation
 To use this calculator, the user needs to install the following utilities:
 - `gcc`
