@@ -4,8 +4,6 @@ Linux networks configuration on virtual machines.
 
 ## Part 1. **ipcalc** tool
 
-"So, let's start our dive into the wonderful world of networks by getting to know IP addresses. And for that we will use **ipcalc** tool."
-
 **== Task ==**
 
 ##### Start a virtual machine (hereafter -- ws1)
@@ -25,8 +23,6 @@ Linux networks configuration on virtual machines.
 ##### 2) which of the listed gateway IP addresses are possible for *10.10.0.0/18* network: *10.0.0.1*, *10.10.0.2*, *10.10.10.10*, *10.10.100.1*, *10.10.1.255*
 
 ## Part 2. Static routing between two machines
-
-"Now let's figure out how to connect two machines using static routing."
 
 **== Task ==**
 
@@ -55,12 +51,6 @@ Linux networks configuration on virtual machines.
 
 ## Part 3. **iperf3** utility
 
-"Now that we have linked two machines, tell me: what is the most important thing about transferring information between machines?"
-
-"The connection speed?"
-
-"That's right. We’ll check it with **iperf3** utility."
-
 **== Task ==**
 
 * In this task you need to use ws1 and ws2 from *Part 2*.
@@ -73,8 +63,6 @@ Linux networks configuration on virtual machines.
 - Add a screenshots with the call and output of the used commands to the report.
 
 ## Part 4. Network firewall
-
-"After connecting the machines, the next our task is to control the information flowing over the connection. For that we use firewalls."
 
 **== Task ==**
 
@@ -110,8 +98,6 @@ iptables -X
 
 
 ## Part 5. Static network routing
-
-"So far we have only connected two machines, but now it's time for static routing of the whole network."
 
 **== Task ==**
 
@@ -199,8 +185,6 @@ Here is an example of the **traceroute** utility output after adding a gateway:
 
 ## Part 6. Dynamic IP configuration using **DHCP**
 
-"Our next step is to learn more about **DHCP** service, which you already know."
-
 **== Task ==**
 
 *In this task you need to use virtual machines from Part 5.*
@@ -236,8 +220,6 @@ subnet 10.20.0.0 netmask 255.255.255.192
 **P.S. Do not upload dumps to git under any circumstances!**
 
 ## Part 7. **NAT**
-
-"And finally, the cherry on the cake, let me tell you about network address translation mechanism."
 
 **== Task ==**
 
@@ -279,16 +261,6 @@ subnet 10.20.0.0 netmask 255.255.255.192
 
 ## Part 8. Bonus. Introduction to **SSH Tunnels**
 
-"Well, that'll be all for now. Do you have any other questions?"
-
-"Yes, I wanted to ask about one more thing. When I was at work, I overheard that there are some kind of training projects in my company. I don't know the details, but I'd really like to take a look... It might be useful."
-
-"Yes, it's really interesting, but how can I help you with that?"
-
-"The problem is that you need to have an access to a closed network to get to these projects. Can you give me any advice on that?"
-
-"Wow, that’s really something… I'm not sure how much help this will be, but I can tell you about **SSH Tunnels**."
-
 **== Task ==**
 
 *In this task you need to use virtual machines from Part 5.*
@@ -299,24 +271,3 @@ subnet 10.20.0.0 netmask 255.255.255.192
 ##### Use *Remote TCP forwarding* from ws11 to ws22 to access the web server on ws22 from ws11
 ##### To check if the connection worked in both of the previous steps, go to a second terminal (e.g. with the Alt + F2) and run the `telnet 127.0.0.1 [local port]` command.
 - In the report, describe the commands that you need for doing these 4 steps and add screenshots of their call and output.
-
-##### Save dumps of virtual machine images
-**P.S. Do not upload dumps to git under any circumstances!**
-
-## Chapter IV
-
-"Thank you so much for the help!"
-
-"You’re welcome! It was good for me to remember the basics of administration too. By the way, I’ve decided to go into DevOps."
-
-"Wow! Have you already found a job?"
-
-"Yes, but I’ll have to move. So, next time you'll have to learn everything on your own."
-
-"Sooner or later I'd have to start anyway, so maybe it's for the best. Stay in touch to tell me about how you’re getting on!"
-
-"You too!"
-
-\> *You talk about other things for a while, listening to some nice music and finishing your drinks, and then you say goodbye...*.
-
-💡 [Tap here](https://forms.yandex.ru/cloud/6418183eeb614624a5cee6b5/) **to leave your feedback on the project**. Product Team really tries to make your educational experience better.

@@ -39,15 +39,15 @@
 
 ### 2.1. Adding a static route manually
 
-* ![route](report_screens/2.1 route.png)
+* ![route](report_screens/2.1_route.png)
 
-* ![ping](report_screens/2.1 ping.png)
+* ![ping](report_screens/2.1_ping.png)
 
 ### 2.2. Adding a static route with saving
 
-* ![static](report_screens/2.2 static.png)
+* ![static](report_screens/2.2_static.png)
 
-* ![ping](report_screens/2.2 ping.png)
+* ![ping](report_screens/2.2_ping.png)
 
 
 ## Part 3. iperf3 utility
@@ -60,24 +60,24 @@
     
 ### 3.2. iperf3 utility
 
-* ![port](report_screens/3.2 set port 5201.png)
-* ![ping](report_screens/3.2 speed.png)
+* ![port](report_screens/3.2_set_port 5201.png)
+* ![ping](report_screens/3.2_speed.png)
 
 ## Part 4. Network firewall
 
 ### 4.1. iptables utility
 
-* ![firewall](report_screens/4.1 firewall.png)
+* ![firewall](report_screens/4.1_firewall.png)
 
-* ![run](report_screens/4.1  run.png)
+* ![run](report_screens/4.1_run.png)
 
 * iptables прекращает обработку, как только находит совпадение, поэтому в ws1 будет запрещен вывод echo-reply, а в ws2 - разрешен
 
 ### 4.2. nmap utility
 
-* ![ping](report_screens/4.2 ping.png)
+* ![ping](report_screens/4.2_ping.png)
 
-* ![nmap](report_screens/4.2 nmap.png)
+* ![nmap](report_screens/4.2_nmap.png)
 
             
 ## Part 5. Static network routing
@@ -85,60 +85,60 @@
 ### 5.1. Configuration of machine addresses
 
 * ws11 and ws21 configuration
-* ![ws11 ws21](report_screens/5.1 ws11 ws21.png)
+* ![ws11 ws21](report_screens/5.1_ws11_ws21.png)
 
 * ws22 configuration
-* ![ws22](report_screens/5.1 ws22.png)
+* ![ws22](report_screens/5.1_ws22.png)
 
 * r1 and r2 configuration
-* ![r1 r2](report_screens/5.1 r1 r2.png)
+* ![r1 r2](report_screens/5.1_r1_r2.png)
 
 * ip: ws11 and ws21
-* ![ws11 ws21](report_screens/5.1 ip ws11 ws21.png)
+* ![ws11 ws21](report_screens/5.1_ip_ws11_ws21.png)
 
 * ip: ws22
-* ![ws22](report_screens/5.1 ip ws22.png)
+* ![ws22](report_screens/5.1_ip_ws22.png)
 
 * ip: r1 and r2
-* ![r1 r2](report_screens/5.1 ip r1 r2.png)
+* ![r1 r2](report_screens/5.1_ip_r1_r2.png)
 
 * ping ws22 from ws21
-* ![ping ws22](report_screens/5.1 ping ws22 f ws21.png)
+* ![ping ws22](report_screens/5.1_ping_ws22_f_ws21.png)
 
 * ping r1 from ws11
-* ![ping r1](report_screens/5.1 ping r1 f ws11.png)
+* ![ping r1](report_screens/5.1_ping_r1_f_ws11.png)
 
 ### 5.2. Enabling IP forwarding
 
-* ![sysctl](report_screens/5.2 sysctl.png)
+* ![sysctl](report_screens/5.2_sysctl.png)
 * ![sysctl](report_screens/5.2.png)
 
 ### 5.3. Default route configuration
 
 * ws11 ws21
-* ![ws11 ws21](report_screens/5.3 ws11 ws21.png)
+* ![ws11 ws21](report_screens/5.3_ws11_ws21.png)
 
 * ws22
-* ![ws 22](report_screens/5.3 ws22.png)
+* ![ws 22](report_screens/5.3_ws22.png)
 
 * ws11 ws21
-* ![ws11 ws21](report_screens/5.3 ip r ws11 ws21.png)
+* ![ws11 ws21](report_screens/5.3_ip_r_ws11_ws21.png)
 
 * ws22
-* ![ws 22](report_screens/5.3 ip r ws22.png)
+* ![ws 22](report_screens/5.3_ip_r_ws22.png)
 
 * Ping r2 router from ws11 + tcpdump -tn -i eth0
-* ![ping r2](report_screens/5.3 ping r2 f ws11.png)
+* ![ping r2](report_screens/5.3_ping_r2_f_ws11.png)
 
 ### 5.4. Adding static routes
 
 * static routes for r1 and r2
-* ![r1 r2](report_screens/5.4 r1 r2.png)
+* ![r1 r2](report_screens/5.4_r1_r2.png)
 
 * ip: r1 and r2
-* ![r1 r2](report_screens/5.4 ip r1 r2.png)
+* ![r1 r2](report_screens/5.4_ip_r1_r2.png)
 
-* ![r1 r2](report_screens/5.4 ip r list.png)
+* ![r1 r2](report_screens/5.4_ip_r_list.png)
 
 * Если к сети существует несколько маршрутов, то выбирается более точный маршрут, по правилу длиннейшего префикса - 10.10.0.0/18 нежели 0.0.0.0/0, 18 > 0.
 
@@ -162,44 +162,44 @@
 ## Part 6. Dynamic IP configuration using DHCP
 
 * dhcp setting of r2
-* ![r2](report_screens/6.1 dhcp r2.png)
+* ![r2](report_screens/6.1_dhcp_r2.png)
 
 * dns setting of r2
-* ![r2](report_screens/6.1 dns r2.png)
+* ![r2](report_screens/6.1_dns_r2.png)
 
-* ![r2](report_screens/6.1 restart.png)
+* ![r2](report_screens/6.1_restart.png)
 
 * ws21 ip before dhcp setting
-* ![ws11](report_screens/6.1 ip ws21 before.png)
+* ![ws11](report_screens/6.1_ip_ws21_before.png)
 
 * ws21 ip after dhcp setting
-* ![ws11](report_screens/6.1 ip ws21 after.png)
+* ![ws11](report_screens/6.1_ip_ws21_after.png)
 
 * pinging ws22 from ws21
-* ![ws22](report_screens/6.1 ping ws22.png)
+* ![ws22](report_screens/6.1_ping_ws22.png)
 
 * dhcp setting of r1
-* ![r1](report_screens/6.2 dhcp r1.png)
+* ![r1](report_screens/6.2_dhcp_r1.png)
 
 * dns setting of r1
-* ![r1](report_screens/6.2 dns r1.png)
+* ![r1](report_screens/6.2_dns_r1.png)
 
-* ![r1](report_screens/6.2 restart.png)
+* ![r1](report_screens/6.2_restart.png)
 
 * ws11 ip before dhcp setting
-* ![ws11](report_screens/6.2 ip ws11 before.png)
+* ![ws11](report_screens/6.2_ip_ws11_before.png)
 
 * ws11 ip after dhcp setting
-* ![ws11](report_screens/6.2 ip ws11 after.png)
+* ![ws11](report_screens/6.2_ip_ws11_after.png)
 
 * pinging ws22 from ws11
-* ![ws22](report_screens/6.2 ping ws22.png)
+* ![ws22](report_screens/6.2_ping_ws22.png)
 
 * Request ip address update from ws21
 
-* ![ws21](report_screens/6.3 before.png)
+* ![ws21](report_screens/6.3_before.png)
 
-* ![ws21](report_screens/6.3 new.png)
+* ![ws21](report_screens/6.3_new.png)
 
 *  
     - Параметр DHCP 1: маска подсети, которая будет применена к интерфейсу, запрашивающему IP-адрес
@@ -210,27 +210,27 @@
 
 ## Part 7. NAT
 
-* ![public](report_screens/7.1 public.png)
+* ![public](report_screens/7.1_public.png)
 
-* ![apache start](report_screens/7.1.1 apache start.png)
+* ![apache start](report_screens/7.1.1_apache_start.png)
 
-* ![firewall](report_screens/7.2 firewall.png)
+* ![firewall](report_screens/7.2_firewall.png)
 
 * till changes in the firewall a can't ping ws22 from r1
-* ![7.3 can't ping](report_screens/7.3 can't ping.png)
+* ![7.3 can't ping](report_screens/7.3_can't_ping.png)
 
 * making changes
-* ![allow ICMP](report_screens/7.4 allow ICMP.png)
+* ![allow ICMP](report_screens/7.4_allow_ICMP.png)
 
 * success pinging ws22 from r1
-* ![7.5 success pinging](report_screens/7.5 success pinging.png)
+* ![7.5 success pinging](report_screens/7.5_success_pinging.png)
 
 * enabling SNAT and DNAT
-* ![firewall](report_screens/7.6 fiirewall.png)
+* ![firewall](report_screens/7.6_fiirewall.png)
 
-* ![telnet](report_screens/7.7 telnet from ws22.png)
+* ![telnet](report_screens/7.7_telnet_from_ws22.png)
 
-* ![telnet](report_screens/7.7 telnet from r1.png)
+* ![telnet](report_screens/7.7_telnet_from_r1.png)
 
 ## Part 8. Bonus. Introduction to SSH Tunnels
 
@@ -240,17 +240,17 @@
 * ![public](report_screens/8.png)
 
 * Start the Apapche web server
-* ![start](report_screens/8 start.png)
+* ![start](report_screens/8_start.png)
 
 
 * Local TCP forwarding from w21 to ws22
-* ![local](report_screens/8.2 local.png)
+* ![local](report_screens/8.2_local.png)
 
 * Remote TCP forwarding from w11 to ws22
-* ![local](report_screens/8.4 remote.png)
+* ![local](report_screens/8.4_remote.png)
 
 * Connecting to server from ws21
-* ![local](report_screens/8.3 local.png)
+* ![local](report_screens/8.3_local.png)
 
 * Connecting to server from ws11
-* ![local](report_screens/8.5 remote.png)
+* ![local](report_screens/8.5_remote.png)
