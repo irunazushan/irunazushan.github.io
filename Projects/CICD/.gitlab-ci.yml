@@ -1,0 +1,73 @@
+stages:
+  - build
+  - codestyle
+  - test
+  - deploy
+  - notification
+
+build-cat-job:
+  stage: build
+  script:
+    - cd src/cat && make s21_cat
+  artifacts:
+    paths:
+      - src/cat
+    expire_in:   30 days
+
+build-grep-job:
+  stage: build
+  script:
+    - cd src/grep && make s21_grep
+  artifacts:
+    paths:
+      - src/grep
+    expire_in:   30 days
+
+codestyle-job:
+  stage: codestyle
+  script:
+    - cd src/cat/
+    - clang-format -i *.c *.h 
+    - cd ../grep/
+    - clang-format -i *.c *.h
+
+cat-test-job:
+  stage: test
+  needs: ["build-cat-job", "build-grep-job", "codestyle-job"]
+  script:
+    - cd src/cat && make cat_test
+    - if [ "$(find cat_test/differences -mindepth   1 -print -quit)" ]; then echo "Cat tests are FAILED"; exit   1; else echo "Cat tests are SUCCEEDED"; fi
+  artifacts:
+    paths:
+      - src/cat/cat_test/differences/
+    expire_in:   30 days
+
+grep-test-job:
+  stage: test
+  needs: ["build-cat-job", "build-grep-job", "codestyle-job"]
+  script:
+    - cd src/grep && make grep_test
+    - if [ "$(find grep_test/differences -mindepth   1 -print -quit)" ]; then echo "grep tests are failed"; exit   1; else echo "grep tests are succeeded"; fi
+  artifacts:
+    paths:
+      - src/grep/grep_test/differences/
+    expire_in:   30 days
+
+deploy-job:
+  stage: deploy
+  when: manual
+  script:
+    - sudo -u gitlab-runner bash ex.sh
+
+notify-success-job:
+  stage: notification
+  when: on_success
+  needs: ["deploy-job"]
+  script:
+    - bash tg_bot.sh SUCCES ✅
+
+notify-failed-job:
+  stage: notification
+  when: on_failure
+  script:
+    - bash tg_bot.sh UNSUCCESSFUL 🆘
