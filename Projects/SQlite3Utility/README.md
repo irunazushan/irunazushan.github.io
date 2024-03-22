@@ -14,25 +14,25 @@
 
 1. Клонируйте репозиторий на свой локальный компьютер:
 
-        **git clone https://github.com/your_username/warehouse_search.git**
+        git clone https://github.com/your_username/warehouse_search.git
 
 2. Перейдите в директорию проекта:
 
-        **cd warehouse_search**
+        cd warehouse_search
 
 3. Выполните сборку проекта с помощью команды make build:
 
-        **make build**
+        make build
 
 4. Для запуска программы с начальными данными выполните команду make run:
 
-        **make run**
+        make run
 
 Программа будет запущена с параметрами 10 11 14 15, которые могут быть изменены на любое количество символов.
 
 Пример вывода:
 
-![img](images/example.png)
+![img](./images/example.PNG)
 
 
 ## Структура базы данных

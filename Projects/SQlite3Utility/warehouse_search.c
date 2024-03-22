@@ -36,14 +36,11 @@ void get_additional_rack_names(int product_id, const char *main_rack_name, char 
     if (rc == SQLITE_ROW) {
         const unsigned char *rack_names = sqlite3_column_text(stmt, 0);
         if (rack_names) {
-            // Copy the concatenated rack names into a temporary buffer
             char temp_rack_names[256];
             strncpy(temp_rack_names, (const char *)rack_names, sizeof(temp_rack_names));
 
-            // Initialize the additional_rack_names string
             additional_rack_names[0] = '\0';
 
-            // Split the concatenated rack names and add them to additional_rack_names if they are not the main_rack_name
             char *rack_name = strtok(temp_rack_names, ",");
             while (rack_name != NULL) {
                 if (strcmp(rack_name, main_rack_name) != 0) {
@@ -53,7 +50,6 @@ void get_additional_rack_names(int product_id, const char *main_rack_name, char 
                 rack_name = strtok(NULL, ",");
             }
 
-            // Remove the trailing comma and space if any
             if (strlen(additional_rack_names) > 0) {
                 additional_rack_names[strlen(additional_rack_names) - 2] = '\0';
             }
@@ -68,8 +64,8 @@ static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
             printf("\n");
     }
     printf("=== %s\n", argv[4]);
-    printf("%s (id=%s)\n", argv[1], argv[2]); // Assuming argv[1] is product_name and argv[2] is product_id
-    printf("заказ %s, %s шт\n", argv[0], argv[3]); // Assuming argv[0] is order_id and argv[3] is amount
+    printf("%s (id=%s)\n", argv[1], argv[2]); 
+    printf("заказ %s, %s шт\n", argv[0], argv[3]);
 
      char additional_rack_names[256] = "";
     get_additional_rack_names(atoi(argv[2]), argv[4], additional_rack_names, sizeof(additional_rack_names));
