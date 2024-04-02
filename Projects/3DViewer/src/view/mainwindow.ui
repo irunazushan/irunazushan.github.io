@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>814</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>3DViewer</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: rgb(245,245,245);
+}
+
+QOpenGLWidget {
+	border: 1px solid #16AC9D;
+}
+
+QLineEdit {
+	background-color: transparent;
+	color: white;
+	border-radius: 5px;
+	border: 2px solid rgb(79,232,217);
+	padding: 0px; 
+}
+
+QRadioButton {
+	color: white;
+}
+
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/resources/images/radio_button_checked.png);
+}
+
+QRadioButton::indicator:unchecked {
+	image: url(:/resources/images/radio_button_unchecked.png);
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid white;
+    background: #2e3436;
+    height: 8px;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: #16AC9D;
+    border: 1px solid white;
+    width: 15px;
+    margin: -4px 0;
+    border-radius: 7px;
+}
+
+QSlider::sub-page:horizontal {
+    background: rgb(79,232,217);
+    border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+    background: #2e3436;
+    border-radius: 4px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="rotateQFrame">
+    <property name="geometry">
+     <rect>
+      <x>572</x>
+      <y>255</y>
+      <width>236</width>
+      <height>126</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QFrame {
+	background-color: rgb(59,78,89);
+	border-radius: 10px;
+	border: 2px solid rgb(47,53,59);
+	color: white;
+}
+
+QLabel {
+	background-color: transparent;
+	border: 0px solid white;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>3</x>
+       <y>3</y>
+       <width>229</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="rotateSlidersQVBoxLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QSlider" name="xRotateQSlider">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>234</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-180</number>
+        </property>
+        <property name="maximum">
+         <number>180</number>
+        </property>
+        <property name="pageStep">
+         <number>5</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="yRotateQSlider">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>234</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-180</number>
+        </property>
+        <property name="maximum">
+         <number>180</number>
+        </property>
+        <property name="pageStep">
+         <number>5</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="zRotateQSlider">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>234</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-180</number>
+        </property>
+        <property name="maximum">
+         <number>180</number>
+        </property>
+        <property name="pageStep">
+         <number>5</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="translateQFrame">
+    <property name="geometry">
+     <rect>
+      <x>573</x>
+      <y>109</y>
+      <width>235</width>
+      <height>116</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QFrame {
+	background-color: rgb(59,78,89);
+	border-radius: 10px;
+	border: 2px solid rgb(47,53,59);
+	color: white;
+}
+
+QLabel {
+	background-color: transparent;
+	border: 0px solid white;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>2</x>
+       <y>0</y>
+       <width>231</width>
+       <height>116</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="translateSlidersQVBoxLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QSlider" name="xTranslateQSlider">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-50</number>
+        </property>
+        <property name="maximum">
+         <number>50</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="yTranslateQSlider">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-50</number>
+        </property>
+        <property name="maximum">
+         <number>50</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="zTranslateQSlider">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-50</number>
+        </property>
+        <property name="maximum">
+         <number>50</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="sliderPosition">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="fileSelectQFrame">
+    <property name="geometry">
+     <rect>
+      <x>572</x>
+      <y>6</y>
+      <width>235</width>
+      <height>68</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QFrame {
+	background-color: rgb(59,78,89);
+	border-radius: 10px;
+	border: 2px solid rgb(47,53,59);
+	color: white;
+}
+
+QLabel {
+	background-color: transparent;
+	border: 0px solid white;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="selectFileQPushButton">
+     <property name="geometry">
+      <rect>
+       <x>67</x>
+       <y>37</y>
+       <width>99</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(79,232,217);
+	color: black;
+	border-radius: 5px;
+	border: 2px solid rgb(59,78,89);
+	padding: 3px;
+}
+
+QPushButton:hover {
+	background-color: rgb(59,205,193);
+}
+
+QPushButton:pressed {
+	background-color: rgb(39,170,159);
+} </string>
+     </property>
+     <property name="text">
+      <string>Select a file</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="fileSelectedQLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>3</x>
+       <y>5</y>
+       <width>229</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="scaleQFrame">
+    <property name="geometry">
+     <rect>
+      <x>572</x>
+      <y>412</y>
+      <width>236</width>
+      <height>86</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QFrame {
+	background-color: rgb(59,78,89);
+	border-radius: 10px;
+	border: 2px solid rgb(47,53,59);
+	color: white;
+}
+
+QLabel {
+	background-color: transparent;
+	border: 0px solid white;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QSlider" name="scaleQSlider">
+     <property name="geometry">
+      <rect>
+       <x>2</x>
+       <y>4</y>
+       <width>231</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="minimum">
+      <number>50</number>
+     </property>
+     <property name="maximum">
+      <number>150</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>100</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="backgroundColorQPushButton">
+     <property name="geometry">
+      <rect>
+       <x>168</x>
+       <y>23</y>
+       <width>63</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(179, 179, 179);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="backgroundColorQLabel">
+     <property name="geometry">
+      <rect>
+       <x>2</x>
+       <y>25</y>
+       <width>166</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Syamala Ramana</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>BACKGROUND COLOR:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>57</y>
+       <width>226</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="typeProjectionQGridLayout">
+      <item row="0" column="1">
+       <widget class="QRadioButton" name="orthographicQRadioButton">
+        <property name="font">
+         <font>
+          <family>Syamala Ramana</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>ORTHOGRAPHIC</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="perspectiveQRadioButton">
+        <property name="font">
+         <font>
+          <family>Syamala Ramana</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>PERSPECTIVE</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="vertexQFrame">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>527</y>
+      <width>276</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QFrame {
+	background-color: rgb(59,78,89);
+	border-radius: 10px;
+	border: 2px solid rgb(47,53,59);
+	color: white;
+}
+
+QLabel {
+	background-color: transparent;
+	border: 0px solid white;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>17</x>
+       <y>5</y>
+       <width>243</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="vertexTypeQGridLayout">
+      <item row="1" column="1">
+       <widget class="QRadioButton" name="circleVertexQRadioButton">
+        <property name="font">
+         <font>
+          <family>Syamala Ramana</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>CIRCLE</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QRadioButton" name="squareVertexQRadioButton">
+        <property name="font">
+         <font>
+          <family>Syamala Ramana</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>SQUARE</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="noneVertexQRadioButton">
+        <property name="font">
+         <font>
+          <family>Syamala Ramana</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>NONE</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="vertexSizeQLabel">
+     <property name="geometry">
+      <rect>
+       <x>3</x>
+       <y>32</y>
+       <width>212</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Syamala Ramana</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>SIZE</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="vertexColorQPushButton">
+     <property name="geometry">
+      <rect>
+       <x>219</x>
+       <y>37</y>
+       <width>53</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QSlider" name="vertexSizeQSlider">
+     <property name="geometry">
+      <rect>
+       <x>3</x>
+       <y>48</y>
+       <width>212</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>6</number>
+     </property>
+     <property name="value">
+      <number>3</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="edgeQFrame">
+    <property name="geometry">
+     <rect>
+      <x>286</x>
+      <y>527</y>
+      <width>280</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QFrame {
+	background-color: rgb(59,78,89);
+	border-radius: 10px;
+	border: 2px solid rgb(47,53,59);
+	color: white;
+}
+
+QLabel {
+	background-color: transparent;
+	border: 0px solid white;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>5</y>
+       <width>191</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="edgeTypeQGridLayout">
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="solidQRadioButton">
+        <property name="font">
+         <font>
+          <family>Syamala Ramana</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>SOLID</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QRadioButton" name="dashedQRadioButton">
+        <property name="font">
+         <font>
+          <family>Syamala Ramana</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>DASHED</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="thicknessQLabel">
+     <property name="geometry">
+      <rect>
+       <x>2</x>
+       <y>30</y>
+       <width>212</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Syamala Ramana</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>THICKNESS</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="edgeColorQPushButton">
+     <property name="geometry">
+      <rect>
+       <x>221</x>
+       <y>36</y>
+       <width>54</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QSlider" name="thicknessQSlider">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>47</y>
+       <width>211</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>6</number>
+     </property>
+     <property name="value">
+      <number>2</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="mainInformationQFrame">
+    <property name="geometry">
+     <rect>
+      <x>572</x>
+      <y>509</y>
+      <width>236</width>
+      <height>89</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QFrame {
+	background-color: rgb(59,78,89);
+	border-radius: 10px;
+	border: 2px solid rgb(47,53,59);
+	color: white;
+}
+
+QLabel {
+	background-color: transparent;
+	border: 0px solid white;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="fileNameQLabel">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>0</y>
+       <width>217</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Syamala Ramana</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>FILE NAME</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="fileNameQLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>55</x>
+       <y>20</y>
+       <width>127</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="gridLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>58</y>
+       <width>216</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="otherQGridLayout">
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="edgesCountQLineEdit">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="vertexCountQLineEdit">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="vertexCountQLabel">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>46</y>
+       <width>104</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Syamala Ramana</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>VERTEX</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="edgesCountQLabel">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>46</y>
+       <width>104</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Syamala Ramana</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>EDGES</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="gifQPushButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>8</y>
+       <width>37</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(59,78,89);
+	color:  rgb(79,232,217);
+}</string>
+     </property>
+     <property name="text">
+      <string>GIF</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pngQPushButton">
+     <property name="geometry">
+      <rect>
+       <x>189</x>
+       <y>7</y>
+       <width>39</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(59,78,89);
+	color:  rgb(79,232,217);
+}</string>
+     </property>
+     <property name="text">
+      <string>PNG</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="rotateQLabel">
+    <property name="geometry">
+     <rect>
+      <x>572</x>
+      <y>227</y>
+      <width>238</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>――――        ROTATE         ――――</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="translateQLabel">
+    <property name="geometry">
+     <rect>
+      <x>573</x>
+      <y>77</y>
+      <width>232</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>――――      TRANSLATE      ――――</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vertexQLabel">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>502</y>
+      <width>274</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>――――          VERTEX          ――――</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="edgeQLabel">
+    <property name="geometry">
+     <rect>
+      <x>286</x>
+      <y>501</y>
+      <width>281</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>――――          EGDE          ――――</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="scaleQLabel">
+    <property name="geometry">
+     <rect>
+      <x>574</x>
+      <y>383</y>
+      <width>234</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>――――          SCALE          ――――</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QFrame" name="openGLQFrame">
+    <property name="geometry">
+     <rect>
+      <x>3</x>
+      <y>7</y>
+      <width>559</width>
+      <height>492</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+	border: 3px solid rgb(59,78,89);
+	border-radius: 5px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="CustomOpenGLWidget" name="openGLWidget">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>4</y>
+       <width>551</width>
+       <height>484</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomOpenGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>customopenglwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
