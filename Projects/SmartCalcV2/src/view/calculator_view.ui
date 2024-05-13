@@ -1,0 +1,1537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CalculatorView</class>
+ <widget class="QMainWindow" name="CalculatorView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>825</width>
+    <height>459</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>841</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+ background-color:  rgb(114, 138, 182);
+}</string>
+    </property>
+    <widget class="QCustomPlot" name="graph_screen" native="true">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>20</y>
+       <width>391</width>
+       <height>311</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QFrame" name="gridFrame">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>350</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string>QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+ background-color:  rgb(96, 120, 201);
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5" rowstretch="0,0,0,0,0,0,0" columnstretch="0,0,0,0,0,0">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>2</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>5</number>
+      </property>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="pushButton_acos">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>acos</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="pushButton_mod">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>mod</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="pushButton_8">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="pushButton_asin">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>asin</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="pushButton_cos">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>cos</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="pushButton_pow">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>^</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QPushButton" name="pushButton_mul">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>*</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="5">
+       <widget class="QPushButton" name="pushButton_sum">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="pushButton_atan">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>atan</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" alignment="Qt::AlignTop">
+       <widget class="QPushButton" name="pushButton_sqrt">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>sqrt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="pushButton_tan">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>tan</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="pushButton_closeB">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton_log">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>log</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QPushButton" name="pushButton_pi">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>π</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="4" colspan="2">
+       <widget class="QPushButton" name="pushButton_eq">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>=</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QPushButton" name="pushButton_9">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QPushButton" name="pushButton_dot">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="pushButton_1">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3" colspan="3">
+       <widget class="QPushButton" name="pushButton_graph">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>GRAPH</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="3" colspan="3">
+       <widget class="QDoubleSpinBox" name="xArg">
+        <property name="font">
+         <font>
+          <family>.AppleSystemUIFont</family>
+          <pointsize>16</pointsize>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QDoubleSpinBox{
+
+color: white;
+ background-color:  rgb(96, 120, 201);
+color: rgb(96, 120, 201);;
+background-color: white;
+font: 16pt &quot;.AppleSystemUIFont&quot;;
+}</string>
+        </property>
+        <property name="minimum">
+         <double>-1000000.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>1000000.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.500000000000000</double>
+        </property>
+        <property name="value">
+         <double>-10.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pushButton_ln">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>ln</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="pushButton_7">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QPushButton" name="pushButton_sub">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="pushButton_sin">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>sin</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
+       <widget class="QPushButton" name="pushButton_x">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QPushButton" name="pushButton_div">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: rgb(96, 120, 201);
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  white;
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>/</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QPushButton" name="pushButton_0">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="pushButton_openB">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(96, 120, 201);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>(</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QPushButton" name="pushButtonCredit">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(23, 30, 126);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>CREDIT</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="2">
+       <widget class="QPushButton" name="pushButtonDeposit">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(23, 30, 126);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+        </property>
+        <property name="text">
+         <string>DEPOSIT</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLineEdit" name="result_screen">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>351</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+qproperty-alignment: 'AlignVCenter | AlignRight';
+  font-size: 20px;
+  border-radius: 10px;
+color: rgb(255, 255, 255);
+border: 2px solid white;
+ background-color: qlineargradient(spread:pad, x1:1, y1:0.341, x2:0, y2:4.54545e-05, stop:0 rgba(0, 0, 127, 255), stop:1 rgba(85, 85, 255, 255));
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_clean">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>.AppleSystemUIFont</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+   border: 1px solid gray;
+   border-radius: 5px;
+border: 1px solid white;
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+ background-color:  rgb(23, 30, 126);
+border-right: 1px solid black;
+border-bottom: 2px solid black;
+border-right-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+border-bottom-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 rgb(195,195,195), stop: 1 rgb(240, 240, 240));
+}
+
+QPushButton:pressed {
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:2, fx:0.495074, fy:0.648045, stop:0.0591133 rgba(98, 118, 192, 255), stop:0.571429 rgba(222, 229, 255, 255))
+}</string>
+     </property>
+     <property name="text">
+      <string>CE</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>80</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+border-radius: 15px;
+background-color: white;
+image: url(:/img/pic1.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../resources/pic2.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>80</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+border-radius: 15px;
+background-color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../resources/pic2.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>80</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+border-radius: 15px;
+background-color: white;
+image: url(:/img/pic1.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../resources/pic2.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>80</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+border-radius: 15px;
+background-color: white;
+image: url(:/img/pic1.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../resources/pic2.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>80</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+border-radius: 15px;
+background-color: white;
+image: url(:/img/pic1.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../resources/pic2.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>80</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+border-radius: 15px;
+background-color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../resources/pic2.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>80</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+border-radius: 15px;
+background-color: white;
+image: url(:/img/pic1.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../resources/pic2.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>80</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+border-radius: 15px;
+background-color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../resources/pic2.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>350</y>
+       <width>391</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;}</string>
+            </property>
+            <property name="text">
+             <string>X0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="x0">
+            <property name="font">
+             <font>
+              <family>.AppleSystemUIFont</family>
+              <pointsize>16</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QDoubleSpinBox{
+
+color: white;
+ background-color:  rgb(96, 120, 201);
+color: rgb(96, 120, 201);;
+background-color: white;
+font: 16pt &quot;.AppleSystemUIFont&quot;;
+}</string>
+            </property>
+            <property name="decimals">
+             <number>2</number>
+            </property>
+            <property name="minimum">
+             <double>-1000000.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>-10.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string>X1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="x1">
+            <property name="font">
+             <font>
+              <family>.AppleSystemUIFont</family>
+              <pointsize>16</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QDoubleSpinBox{
+
+color: white;
+ background-color:  rgb(96, 120, 201);
+color: rgb(96, 120, 201);;
+background-color: white;
+font: 16pt &quot;.AppleSystemUIFont&quot;;
+}</string>
+            </property>
+            <property name="minimum">
+             <double>-1000000.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>10.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;
+}</string>
+          </property>
+          <property name="text">
+           <string>Y0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="y0">
+          <property name="font">
+           <font>
+            <family>.AppleSystemUIFont</family>
+            <pointsize>16</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QDoubleSpinBox{
+
+color: white;
+ background-color:  rgb(96, 120, 201);
+color: rgb(96, 120, 201);;
+background-color: white;
+font: 16pt &quot;.AppleSystemUIFont&quot;;
+}</string>
+          </property>
+          <property name="minimum">
+           <double>-1000000.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>1000000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>-10.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+color: white;
+	font: 16pt &quot;.AppleSystemUIFont&quot;;}</string>
+          </property>
+          <property name="text">
+           <string>Y1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="y1">
+          <property name="font">
+           <font>
+            <family>.AppleSystemUIFont</family>
+            <pointsize>16</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QDoubleSpinBox{
+
+color: white;
+ background-color:  rgb(96, 120, 201);
+color: rgb(96, 120, 201);;
+background-color: white;
+font: 16pt &quot;.AppleSystemUIFont&quot;;
+}</string>
+          </property>
+          <property name="minimum">
+           <double>-1000000.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>1000000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>10.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>80</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+border-radius: 15px;
+background-color: white;
+image: url(:/img/pic1.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../resources/pic2.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>80</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+border-radius: 15px;
+background-color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../resources/pic2.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <zorder>label_11</zorder>
+    <zorder>label_15</zorder>
+    <zorder>graph_screen</zorder>
+    <zorder>gridFrame</zorder>
+    <zorder>result_screen</zorder>
+    <zorder>pushButton_clean</zorder>
+    <zorder>label_12</zorder>
+    <zorder>label_13</zorder>
+    <zorder>label_3</zorder>
+    <zorder>verticalLayoutWidget</zorder>
+    <zorder>label_8</zorder>
+    <zorder>label_10</zorder>
+    <zorder>label_9</zorder>
+    <zorder>label_2</zorder>
+    <zorder>label_14</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
