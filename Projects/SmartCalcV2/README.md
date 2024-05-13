@@ -2,7 +2,7 @@
 
 ## Introduction
 
-SmartCalcV2 is an extended version of the standard calculator in C++ using the object-oriented programming paradigm, applying MVC-pattern, implementing the same functions as the application previously developed in the SmartCalc v1.0 project.
+SmartCalcV2 is an extended version of the standard calculator in C++ using the object-oriented programming paradigm, applying MVC-pattern, implementing the same functions as the application previously developed in the [SmartCalc](https://github.com/irunazushan/irunazushan.github.io/tree/main/Projects/SmartCalc) project.
 
 ## MVC pattern scheme
 ![](misc/images/MVC-Process.png)
