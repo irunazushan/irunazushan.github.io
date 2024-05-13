@@ -5,21 +5,21 @@
 SmartCalcV2 is an extended version of the standard calculator in C++ using the object-oriented programming paradigm, applying MVC-pattern, implementing the same functions as the application previously developed in the SmartCalc v1.0 project.
 
 ## MVC pattern scheme
-![](../misc/images/MVC-Process.png)
+![](misc/images/MVC-Process.png)
 
 
 ## The interface of the SmartCalc
 
 The calculator accepts an expression from the user, and after pressing on button 'Enter' or '=' it outputs the result. It is possible to draw a graph, select a range of the coordinate plane, and manipulate the graph using the cursor. The calculator's design is made in the style of Russian folk painting - gzhel
 
-<img src="../misc/images/smartcalc.png" alt="SmartCalc" title="The interface of the SmartCalc">
+<img src="misc/images/smartcalc.png" alt="SmartCalc" title="The interface of the SmartCalc">
 
 ## Function Plotting
 The calculator provides the ability to plot functions. The function plotting feature of the calculator allows you to visually understand mathematical equations by plotting their graphs. This makes it easier to analyze and work with various functions.
 
 
 
-<img src="../misc/images/smartcalcplot.png" alt="SmartCalcPlot" title="Cos(x) plotting">
+<img src="misc/images/smartcalcplot.png" alt="SmartCalcPlot" title="Cos(x) plotting">
 
     Cos(x) plotting
 
@@ -33,7 +33,7 @@ The credit calculator is a helpful tool for determining monthly payments and int
 
 
 
-<img src="../misc/images/creditcalc.png" alt="CreditCalc" title="The interface of the credit calculator">
+<img src="misc/images/creditcalc.png" alt="CreditCalc" title="The interface of the credit calculator">
 
     The interface of the credit calculator
 
@@ -43,7 +43,7 @@ The credit calculator is a helpful tool for determining monthly payments and int
 ### Deposit Calculator 
 The deposit calculator is great for calculating interest on deposits and helping you make informed financial decisions. Whether you're saving for a big purchase or just looking to grow your savings, this tool can help you crunch the numbers and see how your money can grow over time.
 
-<img src="../misc/images/depositcalc.png" alt="DepositCalc" title="The interface of the deposit calculator">
+<img src="misc/images/depositcalc.png" alt="DepositCalc" title="The interface of the deposit calculator">
 
     The interface of the deposit calculator
 
